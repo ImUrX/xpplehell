@@ -1,0 +1,120 @@
+body {
+    margin: 0px;
+    height: 100%;
+}
+
+:root {
+    text-align: center;
+    font: 1.2em sans-serif;
+    --border-length: 2px;
+
+    height: 100%;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-direction: row;
+    border-bottom: var(--border-length) solid black;
+}
+
+header>* {
+    flex-grow: 0.1;
+}
+
+header> :first-child {
+    border-right: var(--border-length) solid black;
+}
+
+header> :last-child {
+    border-left: var(--border-length) solid black;
+}
+
+#titlebar {
+    flex-grow: 2;
+    border: 0px;
+    margin: 0px 0.5em;
+}
+
+main {
+    margin: 0px 20px;
+    height: 100%;
+}
+
+#canvas {
+    border: var(--border-length) solid black;
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+}
+
+#toolbar {
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    border-bottom: var(--border-length) solid black;
+}
+
+#toolbar > button + button{
+    border-left: var(--border-length) solid black
+}
+
+#eraser, #clear, #share {
+    flex: 1.5;
+}
+
+#eraser {
+    align-self: flex-start;
+}
+
+#clear, #share {
+    align-self: flex-end;
+}
+
+.button.color {
+    background-color: var(--type);
+    flex: 1;
+}
+
+
+/**********
+    Reset button
+    *************/
+button {
+    font-family: inherit;
+    /* For all browsers */
+    font-size: 100%;
+    /* For all browsers */
+    line-height: 1.15;
+    /* For all browsers */
+    margin: 0;
+    /* Firefox and Safari have margin */
+    overflow: visible;
+    /* Edge hides overflow */
+    text-transform: none;
+    /* Firefox inherits text-transform */
+    -webkit-appearance: button;
+    /* Safari otherwise prevents some styles */
+}
+
+button::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+}
+
+.button {
+    border: 0;
+    border-radius: 0;
+    background: white;
+    color: black;
+    font-family: -system-ui, sans-serif;
+    font-size: 1rem;
+    line-height: 1.2;
+    white-space: nowrap;
+    text-decoration: none;
+    padding: 0px;
+    margin: 0px;
+    cursor: pointer;
+}
