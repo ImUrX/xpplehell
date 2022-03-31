@@ -1,5 +1,5 @@
 body {
-    margin: 0px;
+    margin: 0;
     height: 100%;
 }
 
@@ -20,26 +20,26 @@ header {
     border-bottom: var(--border-length) solid black;
 }
 
-header>* {
+header > * {
     flex-grow: 0.1;
 }
 
-header> :first-child {
+header > :first-child {
     border-right: var(--border-length) solid black;
 }
 
-header> :last-child {
+header > :last-child {
     border-left: var(--border-length) solid black;
 }
 
 #titlebar {
     flex-grow: 2;
-    border: 0px;
-    margin: 0px 0.5em;
+    border: 0;
+    margin: 0 0.5em;
 }
 
 main {
-    margin: 0px 20px;
+    margin: 0 20px;
     height: 100%;
 }
 
