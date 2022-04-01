@@ -12,6 +12,10 @@ export class MouseDrawer {
         this.#ctx = canvas.getContext("2d");
         this.#pencil = new Pencil();
     }
+    
+    updatePencil(color) {
+        this.#pencil.setPencilColor(color);
+    }
 
     #draw() {
         this.#ctx.beginPath();
