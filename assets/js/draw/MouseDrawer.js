@@ -2,7 +2,13 @@
 
 export class MouseDrawer {
     
+    /**
+     * @type {HTMLCanvasElement}
+     */
     #canvas;
+    /**
+     * @type {CanvasRenderingContext2D}
+     */
     #ctx;
     #pencil;
     #isDrawing = false;
