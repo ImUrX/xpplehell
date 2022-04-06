@@ -1,14 +1,9 @@
-#canvas {
-    border: var(--border-length) solid black;
+﻿#drawing-container {
+    background-color: white;
     display: flex;
     flex-direction: column;
-    height: 70vh;
-    max-height: 1080;
-    max-width: 1920;
-}
-
-#canvas-container {
-    overflow: scroll;
+    /* fixme 100% causes issues */
+    height: 99%;
 }
 
 #toolbar {
@@ -18,7 +13,7 @@
     border-bottom: var(--border-length) solid black;
 }
 
-#toolbar > button + button{
+#toolbar > button + button {
     border-left: var(--border-length) solid black
 }
 
@@ -28,6 +23,8 @@
 
 #eraser {
     align-self: flex-start;
+    font-weight: bold;
+    color: red;
 }
 
 #clear, #share {
@@ -35,10 +32,8 @@
 }
 
 .button.color {
-    background-color: var(--type);
     flex: 1;
 }
-
 
 /**********
     Reset button
@@ -68,14 +63,18 @@ button::-moz-focus-inner {
 .button {
     border: 0;
     border-radius: 0;
-    background: white;
     color: black;
     font-family: -system-ui, sans-serif;
     font-size: 1rem;
     line-height: 1.2;
     white-space: nowrap;
     text-decoration: none;
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
     cursor: pointer;
+}
+
+#canvas-container {
+    overflow: hidden;
+    cursor: crosshair;
 }

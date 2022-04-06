@@ -1,8 +1,8 @@
 ﻿export class Pencil {
-    
+
     static PENCIL_RADIUS = 2;
-    static ERASER_RADIUS = 14;
-    
+    static ERASER_RADIUS = 25;
+
     #pencilColor = "black";
     #isEraser = false;
     prevX = 0;
@@ -24,5 +24,10 @@
 
     toggleEraser() {
         this.#isEraser = !this.#isEraser;
+        if (this.#isEraser) {
+            this.#pencilColor = "white";
+        } else {
+            this.#pencilColor = "transparent";
+        }
     }
 }
